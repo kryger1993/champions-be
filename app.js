@@ -8,8 +8,8 @@ const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
 const compression = require('compression');
 
-// TODO AppError
-// const AppError = require('./utils/appError');
+// AppError used to manage and wrap customizable error from the apis
+const AppError = require('./utils/app-error');
 
 // TODO generic error handler
 // const globalErrorHandler = require('./controllers/error-controller');
