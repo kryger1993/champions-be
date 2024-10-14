@@ -8,11 +8,11 @@ const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
 const compression = require('compression');
 
-// AppError used to manage and wrap customizable error from the apis
+// AppError class used to wrap errors always in the same object
 const AppError = require('./utils/app-error');
 
-// TODO generic error handler
-// const globalErrorHandler = require('./controllers/error-controller');
+// TODO error handler
+const globalErrorHandler = require('./controllers/error-controller');
 
 // TODO routes
 // const routeName = require('routePath');
@@ -90,7 +90,7 @@ app.use((req, res, next) => {
   next();
 });
 
-// links to routes
+// TODO links to routes
 // app.use('/', viewRouter);
 // app.use('/api/v1/tours', tourRouter);
 
@@ -98,7 +98,6 @@ app.all('*', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server`, 404));
 });
 
-// TODO decomment here when implemented
-// app.use(globalErrorHandler);
+app.use(globalErrorHandler);
 
 module.exports = app;
