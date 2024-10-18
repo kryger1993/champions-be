@@ -25,7 +25,7 @@ const playerSchema = new mongoose.Schema({
     enum: ['user', 'admin', 'super-admin'],
     default: 'user'
   },
-  attendance: {
+  matchesPlayed: {
     type: Number,
     default: 0
   },
@@ -47,27 +47,75 @@ const playerSchema = new mongoose.Schema({
   },
   totAvgPower: {
     type: Number,
-    default: 0
+    default: 0,
+    min: 0,
+    max: 100,
+    validate: {
+      validator: function (val) {
+        return val <= 100 && val >= 0;
+      },
+      message: 'The total average power must be between 0 and 100'
+    }
   },
   attackPower: {
     type: Number,
-    default: 0
+    default: 0,
+    min: 0,
+    max: 100,
+    validate: {
+      validator: function (val) {
+        return val <= 100 && val >= 0;
+      },
+      message: 'The total average power must be between 0 and 100'
+    }
   },
   defensePower: {
     type: Number,
-    default: 0
+    default: 0,
+    min: 0,
+    max: 100,
+    validate: {
+      validator: function (val) {
+        return val <= 100 && val >= 0;
+      },
+      message: 'The total average power must be between 0 and 100'
+    }
   },
   playmakerPower: {
     type: Number,
-    default: 0
+    default: 0,
+    min: 0,
+    max: 100,
+    validate: {
+      validator: function (val) {
+        return val <= 100 && val >= 0;
+      },
+      message: 'The total average power must be between 0 and 100'
+    }
   },
   physiquePower: {
     type: Number,
-    default: 0
+    default: 0,
+    min: 0,
+    max: 100,
+    validate: {
+      validator: function (val) {
+        return val <= 100 && val >= 0;
+      },
+      message: 'The total average power must be between 0 and 100'
+    }
   },
   mindfulnessPower: {
     type: Number,
-    default: 0
+    default: 0,
+    min: 0,
+    max: 100,
+    validate: {
+      validator: function (val) {
+        return val <= 100 && val >= 0;
+      },
+      message: 'The total average power must be between 0 and 100'
+    }
   }
 });
 
