@@ -3,6 +3,8 @@ const playerController = require('../controllers/player-controller');
 
 const router = express.Router();
 
+router.get('/', playerController.getAllPlayer);
+
 router.post('/create', playerController.createPlayer);
 
 router

@@ -55,7 +55,7 @@ exports.getOne = (Model, popOptions) =>
     const doc = await query;
 
     if (!doc) {
-      return next(new AppError('No tour found with that id', 404));
+      return next(new AppError(`No ${Model.modelName} found with that id`, 404));
     }
 
     res.status(200).json({
