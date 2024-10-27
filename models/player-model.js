@@ -12,6 +12,10 @@ const playerSchema = new mongoose.Schema({
     required: [true, 'A player must have a surname'],
     trim: true
   },
+  nickname: {
+    type: String,
+    trim: true
+  },
   email: {
     type: String,
     required: [true, 'A player must have an e-mail'],
