@@ -65,6 +65,6 @@ const matchSchema = new mongoose.Schema({
 
 // TODO middlewares
 
-const Player = mongoose.model('Player', matchSchema);
+const Match = mongoose.model('Match', matchSchema);
 
-module.exports = Player;
+module.exports = Match;
