@@ -85,7 +85,7 @@ const playerSchema = new mongoose.Schema({
       message: 'The total average power must be between 0 and 100'
     }
   },
-  playmakerPower: {
+  gameManagementPower: {
     type: Number,
     default: 0,
     min: 0,
@@ -97,7 +97,7 @@ const playerSchema = new mongoose.Schema({
       message: 'The total average power must be between 0 and 100'
     }
   },
-  physiquePower: {
+  physicalPower: {
     type: Number,
     default: 0,
     min: 0,
@@ -109,7 +109,7 @@ const playerSchema = new mongoose.Schema({
       message: 'The total average power must be between 0 and 100'
     }
   },
-  mindfulnessPower: {
+  mentalityPower: {
     type: Number,
     default: 0,
     min: 0,
