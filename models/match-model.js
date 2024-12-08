@@ -23,15 +23,15 @@ const matchSchema = new mongoose.Schema({
       validator: function (val) {
         return val.length === 5;
       },
-      message: 'A match must have 5 players in the first team'
+      message: 'A match must have 5 players in the second team'
     }
   },
   result: {
-    firstTeam: {
+    teamA: {
       type: Number,
       default: 0
     },
-    secondTeam: {
+    teamB: {
       type: Number,
       default: 0
     }

@@ -17,6 +17,7 @@ const globalErrorHandler = require('./controllers/error-controller');
 // TODO routes
 // const routeName = require('routePath');
 const playerRouter = require('./routes/player-routes');
+const matchRouter = require('./routes/match-route');
 
 const app = express();
 
@@ -95,6 +96,7 @@ app.use((req, res, next) => {
 // app.use('/', viewRouter);
 // app.use('/api/v1/tours', tourRouter);
 app.use('/api/v1/players', playerRouter);
+app.use('/api/v1/matches', matchRouter);
 
 app.all('*', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server`, 404));
